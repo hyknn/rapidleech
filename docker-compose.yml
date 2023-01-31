@@ -3,11 +3,11 @@ services:
 
   web:
     container_name: php-apache
-    image: splitbrain/phpfarm:jessie
+    image: php:8.2.1-apache
     ports:
-      - "80:8072"
+      - "80:80"
     volumes:
-      - .:/var/www/
+      - .:/var/www/html
 
   mysql:
     container_name: db
